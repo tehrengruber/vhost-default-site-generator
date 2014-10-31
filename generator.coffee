@@ -4,9 +4,9 @@ fs = require('fs');
 # valid hostnames
 hostnames = require('./hostnames.json');
 
-images = fs.readdirSync(__dirname + "/web/images").filter((x) -> x!=".DS_Store").sort();
+images = fs.readdirSync(__dirname + "/web/images").filter((x) -> x!=".DS_Store" && x.substr(0, 5) != "error").sort();
 htaccess = "RewriteEngine On \n\n";
-
+console.log(images);
 for hostname, i in hostnames
 	# write html file
 	fs.writeFileSync(
