@@ -6,6 +6,7 @@ Generate default sites for various vhosts
 
 * sass (currently foundation only supports version 3.3.x)
 * compass
+* foundation
 
 ## Usage
 
