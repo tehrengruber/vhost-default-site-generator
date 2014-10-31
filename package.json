@@ -1,0 +1,19 @@
+{
+  "name": "vhost-default-site-generator",
+  "version": "1.0.0",
+  "description": "Create default sites for various vhosts",
+  "main": "generate.js",
+  "dependencies": {
+    "ejs": "^1.0.0"
+  },
+  "author": "Till Ehrengruber",
+  "license": "MIT",
+  "scripts": {
+    "install": "cd web/foundation && compass compile",
+    "prepublish": "coffee -c ."
+  },
+  "devDependencies": {
+    "coffee-script": "~1.8.0"
+  },
+  "readme": "readme.md"
+}
