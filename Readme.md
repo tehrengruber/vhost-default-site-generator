@@ -18,6 +18,13 @@ Add your vhosts hostnames to `hostnames.json`
 	# generate your stuff
 	node generator
 
+Upload your files
+
+	PORT=22
+	SERVER=example.com
+	DIRECTORY=/var/www/
+	rsync -r -vraze "ssh -p $PORT" --exclude="*.scss" --exclude=".sass-cache/*" web/* root@$SERVER:$DIRECTORY
+
 # License
 
 ## Images (web/images)
